@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return [
     'app_info' => [
@@ -6,6 +6,7 @@ return [
         'api_hash' => '',
     ],
     'logger' => [
-         'logger' => 0,
-     ],
- ];
+        'logger' => 0,
+    ],
+    'print_update' => true,
+];

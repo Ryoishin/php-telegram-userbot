@@ -28,7 +28,9 @@ class Userbot
     {
         while (true) {
             $this->bot->setCallback(function ($update) {
-                print_r($update);
+                if ($this->settings['print_update'] ?? false) {
+                    print_r($update);
+                } 
                 $this->update = $update;
                 $this->loadComponents($this->bot, $update, @$update['message']['message'], @$update['message']['user_id'], @$update['message']['from_id']);
             });
