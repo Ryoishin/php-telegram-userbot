@@ -15,7 +15,7 @@ cd userbot
 
 **3.** Rename `settings.php.example` to `settings.php`
 ```bash
-cp .settings.php.example .settings.php
+cp settings.php.example settings.php
 ```
 
 **4.** In `settings.php` you can may change `api_id` and `api_hash` (optional).
