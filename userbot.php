@@ -4,9 +4,7 @@ if (!file_exists(__DIR__ . '/madeline.php')) {
     copy('https://phar.madelineproto.xyz/madeline.php', __DIR__ . '/madeline.php');
 }
 
-require __DIR__ . '/madeline.php';
 require __DIR__ . '/core/autoload.php';
-
 
 $maxCountFails = 5;
 $fails = 0;
@@ -23,4 +21,4 @@ while (true) {
     echo "\n-------------------------------\n";
 }
 
-echo "User bot has stopped.";
+echo "Userbot has stopped.";
