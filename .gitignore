@@ -1,0 +1,6 @@
+madeline.php
+madeline.phar
+madeline.phar.version
+settings.php
+storage/sessions/*.ssn
+storage/sessions/*.lock

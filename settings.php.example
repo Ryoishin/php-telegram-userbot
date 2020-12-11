@@ -1,0 +1,11 @@
+<?php 
+
+return [
+    'app_info' => [
+        'api_id' => '',
+        'api_hash' => '',
+    ],
+    'logger' => [
+         'logger' => 0,
+     ],
+ ];
