@@ -26,20 +26,21 @@ class Userbot
 
     public function run()
     {
+        $me = $this->bot->getSelf();
         while (true) {
-            $this->bot->setCallback(function ($update) {
+            $this->bot->setCallback(function ($update) use ($me) {
                 if ($this->settings['print_update'] ?? false) {
                     print_r($update);
                 } 
                 $this->update = $update;
-                $this->loadComponents($this->bot, $update, @$update['message']['message'], @$update['message']['user_id'], @$update['message']['from_id']);
+                $this->loadComponents($this->bot, $update, @$update['message']['message'], $me, @$update['message']['user_id'], @$update['message']['from_id']);
             });
             $this->bot->async(true);
             $this->bot->loop();
         }
     }
 
-    private function loadComponents(API $bot, array $update, $message = null, $userId = null, $fromId = null)
+    private function loadComponents(API $bot, array $update, $message = null, array $me, $userId = null, $fromId = null)
     {
         foreach (glob(__DIR__ . '/../components/*/component.php') as $component) {
             try {

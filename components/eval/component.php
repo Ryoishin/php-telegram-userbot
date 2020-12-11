@@ -4,11 +4,12 @@
  * @var danog\MadelineProto\API $bot
  * @var array $update
  * @var string|null $message
+ * @var array $me
  * @var int|null $userId
  * @var int|null $fromId
  */
 
-if (mb_strtolower(mb_substr($message, 0, 5)) == '.eval') {
+if (mb_strtolower(mb_substr($message, 0, 5)) == '.eval' && $me['id'] == $fromId) {
     try {
         $php = trim(str_ireplace('.eval', '', $message));
         $eval = print_r(eval($php), true);

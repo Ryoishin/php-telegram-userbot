@@ -65,14 +65,15 @@ Now, create component logic:
 <?php 
 
 /**
- * @var danog\MadelineProto\API $bot
- * @var array $update
- * @var string|null $message
- * @var int|null $userId
- * @var int|null $fromId
+ * @var danog\MadelineProto\API $bot MadelineProto API Instance
+ * @var array $update Array of come Update
+ * @var string|null $message Text of come message
+ * @var array $me Info about your profile
+ * @var int|null $userId Interlocutor (chat, etc.)
+ * @var int|null $fromId Where is it sent from
  */
 
-if ($message == '.helloworld' && $fromId == 'YOUR_TELEGRAM_ID') {
+if ($message == '.helloworld' && $me['id'] == $fromId) {
     edit('<b>Hello World!</b>');
 }
 ```
