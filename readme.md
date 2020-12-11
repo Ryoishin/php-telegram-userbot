@@ -34,7 +34,7 @@ All your code should be in the `components` folder.
 
 Every time a new `$update` arrives, all components are loaded anew. 
 
-That is, you can launch the userbot once and change the component code on the fly without fear of errors that the userbot will not crash.
+That is, you can launch the userbot once and change the component code on the fly without fear of errors that the userbot will crash.
 
 For example, you can see `ping` component [here](https://github.com/aethletic/php-telegram-userbot/tree/master/components/ping).
 
