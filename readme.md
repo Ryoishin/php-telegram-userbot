@@ -3,22 +3,32 @@
 PHP Telegram userbot based on [MadelineProto](https://docs.madelineproto.xyz/) library.
 
 # Install
-Clone this repository:
+**1.** Clone this repository:
 ```bash
 git clone https://github.com/aethletic/php-telegram-userbot.git userbot
 ```
 
-Go to downloaded folder:
+**2.** Go to downloaded folder:
 ```bash
 cd userbot
 ```
 
-Rename `settings.php.example` to `settings.php`
+**3.** Rename `settings.php.example` to `settings.php`
 ```bash
 cp .settings.php.example .settings.php
 ```
 
-Run userbot:
+**4.** In `settings.php` you can may change `api_id` and `api_hash` (optional).
+```
+...
+'app_info' => [
+    'api_id' => 'YOUR_API_ID',
+    'api_hash' => 'YOUR_API_HASH',
+],
+...
+```
+
+**5.** Run userbot:
 ```bash
 php userbot.php
 ```
