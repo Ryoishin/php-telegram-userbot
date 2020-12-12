@@ -4,7 +4,7 @@ if (!file_exists(__DIR__ . '/madeline.php')) {
     copy('https://phar.madelineproto.xyz/madeline.php', __DIR__ . '/madeline.php');
 }
 
-require __DIR__ . '/core/autoload.php';
+require __DIR__ . '/autoload.php';
 
 $maxCountFails = 5;
 $fails = 0;
