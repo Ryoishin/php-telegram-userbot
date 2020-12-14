@@ -25,8 +25,11 @@ class Userbot
     }
 
     public function run()
-    {
+    {   
+        echo "userbot running...\n";
+
         $me = $this->bot->getSelf();
+        
         while (true) {
             $this->bot->setCallback(function ($update) use ($me) {
                 /** ignore everything except messages */
@@ -49,7 +52,7 @@ class Userbot
                 /** laod and run components */
                 $this->loadComponents($this->bot, $update, @$update['message']['message'], $me, @$update['message']['user_id'], @$update['message']['from_id']);
             });
-            
+
             $this->bot->async(true);
             $this->bot->loop();
         }
