@@ -85,6 +85,10 @@ if (mb_strtolower(mb_substr($message, 0, 4)) == '.cp ' && $me['id'] == $fromId) 
 
             $file = "{$dir}/component.php";
 
+            if (!file_exists($file)) {
+                unlink($file);
+            }
+
             $bot->downloadToFile($update['message']['media'], $file);
 
             reply("Component successfuly saved!");
