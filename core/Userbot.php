@@ -29,12 +29,27 @@ class Userbot
         $me = $this->bot->getSelf();
         while (true) {
             $this->bot->setCallback(function ($update) use ($me) {
+                /** ignore everything except messages */
+                if (!isset($update['message']['message'])) {
+                    return;
+                }
+
+                /** ignore old updates if bot was down some time */
+                if (round(time() - $update['message']['date']) > 60) {
+                    return;
+                }
+
+                /** print update in terminal */
                 if ($this->settings['print_update'] ?? false) {
                     print_r($update);
                 } 
+
                 $this->update = $update;
+
+                /** laod and run components */
                 $this->loadComponents($this->bot, $update, @$update['message']['message'], $me, @$update['message']['user_id'], @$update['message']['from_id']);
             });
+            
             $this->bot->async(true);
             $this->bot->loop();
         }

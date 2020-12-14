@@ -7,8 +7,8 @@ if (!file_exists(__DIR__ . '/madeline.php')) {
 require __DIR__ . '/autoload.php';
 
 $maxCountFails = 5;
-$fails = 0;
 
+$fails = 0;
 while (true) {
     Userbot::getInstance()
                 ->create(__DIR__ . '/storage/sessions/userbot.ssn', require __DIR__ . '/settings.php')
