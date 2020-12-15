@@ -84,6 +84,8 @@ Now, we can send a message with the text `.helloworld`, and it will be automatic
 
 # Helpers
 
+> **NOTE:** You can pass any method params in `$extra`.
+
 `send($text, [$extra = []])` - short alias for `$bot->messages->sendMessage()`.
 
 `reply($text, [$extra = []])` - reply to incoming message.
@@ -94,7 +96,7 @@ Now, we can send a message with the text `.helloworld`, and it will be automatic
 
 `replyMedia($media, [$text = null, $extra = []])` - reply with file to incoming message.
 
-> **NOTE:** You can pass any method params in `$extra`.
+
 
 
 
