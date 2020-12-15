@@ -13,7 +13,9 @@ git clone https://github.com/aethletic/php-telegram-userbot.git userbot
 cd userbot
 ```
 
-**3.** Rename `settings.php.example` to `settings.php`
+**3.** Rename `settings.php.example` to `settings.php`. 
+
+See more info about settings [here](https://docs.madelineproto.xyz/docs/SETTINGS.html).
 ```bash
 cp settings.php.example settings.php
 ```
