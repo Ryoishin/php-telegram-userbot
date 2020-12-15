@@ -64,7 +64,8 @@ class Userbot
             try {
                 include $component;
             } catch (\Throwable $th) {
-                echo $th->getMessage();
+                $name = basename($component);
+                echo "[ERROR] Component `{$name}`: " . $th->getMessage() . PHP_EOL;
             }
         }
     }
