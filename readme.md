@@ -81,13 +81,20 @@ if ($message == '.helloworld' && $me['id'] == $fromId) {
 Now, we can send a message with the text `.helloworld`, and it will be automatically edited to contain `Hello World!`.
 
 > **NOTE:** After editing or creating a new component, it is **not necessary** to restart the userbot.
+
 # Helpers
 
-`send($text, $extra)` - short alias for `$bot->messages->sendMessage()`.
+`send($text, [$extra = []])` - short alias for `$bot->messages->sendMessage()`.
 
-`edit($text, $extra)` - short alias for `$bot->messages->editMessage()`.
+`reply($text, [$extra = []])` - reply to incoming message.
 
-> **NOTE:** You can pass method params in `$extra`.
+`edit($text, [$extra = []])` - short alias for `$bot->messages->editMessage()`.
+
+`sendMedia($media, [$text = null, $extra = []])` - short alias for `$bot->messages->sendMedia`.
+
+`replyMedia($media, [$text = null, $extra = []])` - reply with file to incoming message.
+
+> **NOTE:** You can pass any method params in `$extra`.
 
 
 

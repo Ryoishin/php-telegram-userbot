@@ -15,56 +15,56 @@ if (!function_exists('update')) {
 }
 
 if (!function_exists('edit')) {
-    function edit($text)
+    function edit($text, $extra = [])
     {
         $userbot = Userbot::getInstance();
         $bot = $userbot->bot;
         $update = $userbot->update;
-        return $bot->messages->editMessage([
+        return $bot->messages->editMessage(array_merge([
             'id' => @$update['message']['id'],
             'peer' => $update,
             'message' => $text,
             'parse_mode' => 'html',
-        ]);
+        ], $extra));
     }
 }
 
 if (!function_exists('send')) {
-    function send($text)
+    function send($text, $extra = [])
     {
         $userbot = Userbot::getInstance();
         $bot = $userbot->bot;
         $update = $userbot->update;
-        return $bot->messages->sendMessage([
+        return $bot->messages->sendMessage(array_merge([
             'peer' => $update,
             'message' => $text,
             'parse_mode' => 'html',
-        ]);
+        ],  $extra));
     }
 }
 
 if (!function_exists('reply')) {
-    function reply($text)
+    function reply($text, $extra = [])
     {
         $userbot = Userbot::getInstance();
         $bot = $userbot->bot;
         $update = $userbot->update;
-        return $bot->messages->sendMessage([
+        return $bot->messages->sendMessage(array_merge([
             'peer' => $update,
             'reply_to_msg_id' => $update['message']['id'],
             'message' => $text,
             'parse_mode' => 'html',
-        ]);
+        ], $extra));
     }
 }
 
 if (!function_exists('sendMedia')) {
-    function sendMedia($media, $text = null)
+    function sendMedia($media, $text = null, $extra = [])
     {
         $userbot = Userbot::getInstance();
         $bot = $userbot->bot;
         $update = $userbot->update;
-        return $bot->messages->sendMedia([
+        return $bot->messages->sendMedia(array_merge([
             'peer' => $update,
             'media' => [
                 '_' => 'inputMediaUploadedDocument',
@@ -73,17 +73,17 @@ if (!function_exists('sendMedia')) {
             ],
             'message' => $text,
             'parse_mode' => 'html'
-        ]);
+        ], $extra));
     }
 }
 
 if (!function_exists('replyMedia')) {
-    function replyMedia($media, $text = null)
+    function replyMedia($media, $text = null, $extra = [])
     {
         $userbot = Userbot::getInstance();
         $bot = $userbot->bot;
         $update = $userbot->update;
-        return $bot->messages->sendMedia([
+        return $bot->messages->sendMedia(array_merge([
             'peer' => $update,
             'reply_to_msg_id' => $update['message']['id'],
             'media' => [
@@ -93,6 +93,6 @@ if (!function_exists('replyMedia')) {
             ],
             'message' => $text,
             'parse_mode' => 'html'
-        ]);
+        ], $extra));
     }
 }
