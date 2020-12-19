@@ -49,7 +49,7 @@ class Userbot
 
                 $this->update = $update;
 
-                /** laod and run components */
+                /** load and run components */
                 $this->loadComponents($this->bot, $update, @$update['message']['message'], $me, @$update['message']['user_id'], @$update['message']['from_id']);
             });
 
@@ -65,7 +65,7 @@ class Userbot
                 include $component;
             } catch (\Throwable $th) {
                 $name = basename($component);
-                echo "[ERROR] Component `{$name}`: " . $th->getMessage() . PHP_EOL;
+                echo PHP_EOL . "[ERROR] Component `{$name}`: " . $th->getMessage() . PHP_EOL;
             }
         }
     }
