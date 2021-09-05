@@ -25,4 +25,4 @@ while (true) {
     echo "\n-------------------------------\n";
 }
 
-echo "Userbot was stopped.";
+echo "Userbot Was Stopped.";
