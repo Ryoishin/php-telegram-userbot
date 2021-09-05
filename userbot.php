@@ -21,8 +21,8 @@ while (true) {
     if (++$fails >= $maxCountFails) break;
 
     echo "\n-------------------------------\n";
-    echo "Whoops! Userbot down, restarting ...\n";
+    echo "Whoops! Userbot Down, Restarting ...\n";
     echo "\n-------------------------------\n";
 }
 
-echo "Userbot was stopped.";
+echo "Userbot Was Stopped.";
