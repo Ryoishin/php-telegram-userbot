@@ -5,7 +5,7 @@ PHP Telegram userbot based on [MadelineProto](https://docs.madelineproto.xyz/) l
 # Install
 **1.** Clone this repository:
 ```bash
-git clone https://github.com/chipslays/php-telegram-userbot.git userbot
+git clone https://github.com/ryoishin/php-telegram-userbot.git userbot
 ```
 
 **2.** Go to downloaded folder:
