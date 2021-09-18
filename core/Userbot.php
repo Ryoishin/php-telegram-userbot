@@ -5,7 +5,7 @@ use danog\MadelineProto\API;
 class Userbot
 {
     /**
-     * @var API
+     * VAR API
      */
     public $bot;
 
