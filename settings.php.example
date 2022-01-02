@@ -10,3 +10,4 @@ return [
     ],
     'print_update' => true,
 ];
+
