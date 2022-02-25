@@ -10,5 +10,5 @@
  */
 
 if (mb_strtolower($message) == '.ping' && $me['id'] == $fromId) {
-    edit('<b>pong!</b>');
+    edit('<b>pong!!!!!!!</b>');
 }
